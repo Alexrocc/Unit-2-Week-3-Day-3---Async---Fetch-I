@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
           col.classList.add("col-6", "col-md-4", "col-xl-3");
           row.appendChild(col);
           const cardDiv = document.createElement("div");
-          cardDiv.classList.add("card");
+          cardDiv.classList.add("card", "h-100");
 
           const cardImg = document.createElement("img");
           cardImg.classList.add("card-img-top");
@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
           cardDiv.appendChild(cardImg);
 
           const cardBody = document.createElement("div");
-          cardBody.classList.add("card-body");
+          cardBody.classList.add("card-body", "d-flex", "flex-column", "align-items-center");
           cardDiv.appendChild(cardBody);
 
           const bookTitle = document.createElement("h5");
@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
           const removeBtn = document.createElement("button");
           removeBtn.type = "button";
           removeBtn.innerText = "Remove";
-          removeBtn.classList.add("btn", "btn-secondary");
+          removeBtn.classList.add("btn", "btn-secondary", "mt-auto");
           removeBtn.onclick = function (e) {
             e.currentTarget.parentNode.parentNode.parentNode.remove();
           };
